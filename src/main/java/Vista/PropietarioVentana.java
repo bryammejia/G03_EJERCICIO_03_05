@@ -6,6 +6,7 @@ package Vista;
 
 import Controlador.PropietarioControl;
 import Modelo.Propietario;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -224,6 +225,7 @@ public class PropietarioVentana extends javax.swing.JInternalFrame {
         
         propietarioControl.crearPropietario(args);
         this.actualizarTablaPropietario();
+        JOptionPane.showMessageDialog(this, "El Propietario a sido Registrado correctamente");
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -237,8 +239,9 @@ public class PropietarioVentana extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         String arg;
         arg= this.txtCodigo.getText();
+        if(JOptionPane.showConfirmDialog(this, "Esta seguro de eliminar")==0){
         this.propietarioControl.eliminar(arg);
-        
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -251,6 +254,9 @@ public class PropietarioVentana extends javax.swing.JInternalFrame {
         args[4] = this.txtCelular.getText();
         
        this.propietarioControl.modificar(args);
+       
+       JOptionPane.showMessageDialog(this, "Datos Actualizados", 
+               "Modificar Propietario", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed

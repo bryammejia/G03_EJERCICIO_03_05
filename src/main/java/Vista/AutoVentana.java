@@ -6,6 +6,7 @@ package Vista;
 
 import Controlador.AutoControlador;
 import Modelo.Auto;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -222,7 +223,9 @@ public class AutoVentana extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         String arg;
         arg= this.txtCodigo.getText();
+        if(JOptionPane.showConfirmDialog(this,"Está seguro de eliminar")==0){
         this.autoControl.eliminar(arg);
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -235,6 +238,9 @@ public class AutoVentana extends javax.swing.JInternalFrame {
         args[3]=this.cbxAnio.getSelectedItem().toString();
         args[4]=this.txtPrecio.getText();
         this.autoControl.modificar(args);
+        
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                "Modificar Autos", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
@@ -251,8 +257,9 @@ public class AutoVentana extends javax.swing.JInternalFrame {
         args[2]=this.txtColor.getText();
         args[3]=this.cbxAnio.getSelectedItem().toString();
         args[4]=this.txtPrecio.getText();
-        autoControl.crearAuto(args);
-        this.actualizarTablaAuto();
+        this.autoControl.crearAuto(args);
+        JOptionPane.showMessageDialog(this, "Auto almacenado con éxito");
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed

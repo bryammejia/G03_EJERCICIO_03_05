@@ -6,6 +6,7 @@ package Vista;
 
 import Controlador.MatriculaControl;
 import Modelo.Matricula;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -181,10 +182,11 @@ public class MatriculaVentana extends javax.swing.JInternalFrame {
                     .addComponent(txtAnioMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAnioExpiracion)
-                    .addComponent(txtAnioExpiracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnListar))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAnioExpiracion, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtAnioExpiracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnListar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPlaca)
@@ -233,8 +235,9 @@ public class MatriculaVentana extends javax.swing.JInternalFrame {
         args[4] = this.txtCAuto.getText();
         args[5]= this.txtCPropietario.getText();
         
-        matriculaControl.crearMatricula(args);
-        this.actualizarTablaMatricula();
+        this.matriculaControl.crearMatricula(args);
+        JOptionPane.showMessageDialog(this, "Matricula registrada correctamente");
+        
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -249,8 +252,9 @@ public class MatriculaVentana extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         String arg;
         arg= this.txtCodigo.getText();
+        if(JOptionPane.showConfirmDialog(this, "Esta seguro de eliminar estos datos")==0){
         this.matriculaControl.eliminar(arg);
-        
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -265,6 +269,9 @@ public class MatriculaVentana extends javax.swing.JInternalFrame {
         args[5]= this.txtCPropietario.getText();
         
         this.matriculaControl.modificar(args);
+        
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                "Modificar Matricula", JOptionPane.ERROR_MESSAGE);
         
     }//GEN-LAST:event_btnModificarActionPerformed
 
