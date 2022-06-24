@@ -29,13 +29,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu5 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        mnuAuto = new javax.swing.JMenuItem();
-        mnuPropietario = new javax.swing.JMenuItem();
-        mnuMatricula = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        mnuSalir1 = new javax.swing.JMenu();
+        mnuPropietario1 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        mnuMatricula1 = new javax.swing.JMenuItem();
+        mnuSalie1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        mnuSalir = new javax.swing.JMenuItem();
+
+        jMenu3.setText("File");
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
+
+        jMenu5.setText("File");
+        jMenuBar3.add(jMenu5);
+
+        jMenu6.setText("Edit");
+        jMenuBar3.add(jMenu6);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,43 +67,91 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jDesktopPane2.setLayout(jDesktopPane2Layout);
         jDesktopPane2Layout.setHorizontalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 641, Short.MAX_VALUE)
+            .addGap(0, 616, Short.MAX_VALUE)
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGap(0, 527, Short.MAX_VALUE)
         );
+
+        jMenu7.setText("Auto");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setText("Crear Auto");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setText("Salir");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu7);
+
+        mnuSalir1.setText("Propietario");
+
+        mnuPropietario1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mnuPropietario1.setText("Crear Propietario");
+        mnuPropietario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuPropietario1ActionPerformed(evt);
+            }
+        });
+        mnuSalir1.add(mnuPropietario1);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setText("Salir");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        mnuSalir1.add(jMenuItem4);
+
+        jMenuBar1.add(mnuSalir1);
+
+        jMenu2.setText("Matricula");
+
+        mnuMatricula1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mnuMatricula1.setText("Crear Matricula");
+        mnuMatricula1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMatricula1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuMatricula1);
+
+        mnuSalie1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mnuSalie1.setText("Salir");
+        mnuSalie1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuSalie1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuSalie1);
+
+        jMenuBar1.add(jMenu2);
 
         jMenu1.setText("Opciones");
 
-        mnuAuto.setText("Auto");
-        mnuAuto.addActionListener(new java.awt.event.ActionListener() {
+        mnuSalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mnuSalir.setText("Salir");
+        mnuSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuAutoActionPerformed(evt);
+                mnuSalirActionPerformed(evt);
             }
         });
-        jMenu1.add(mnuAuto);
-
-        mnuPropietario.setText("Propietario");
-        mnuPropietario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuPropietarioActionPerformed(evt);
-            }
-        });
-        jMenu1.add(mnuPropietario);
-
-        mnuMatricula.setText("Matricula");
-        mnuMatricula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuMatriculaActionPerformed(evt);
-            }
-        });
-        jMenu1.add(mnuMatricula);
+        jMenu1.add(mnuSalir);
 
         jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Ajustes");
-        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -87,23 +159,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane2)
-                .addContainerGap())
+            .addComponent(jDesktopPane2)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane2)
-                .addContainerGap())
+            .addComponent(jDesktopPane2)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mnuAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAutoActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         var auto = new AutoVentana();
         auto.setIconifiable(true);
@@ -112,25 +178,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.jDesktopPane2.add(auto);
         auto.setVisible(true);
         auto.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
-        
-        
-        
-        
-    }//GEN-LAST:event_mnuAutoActionPerformed
 
-    private void mnuMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMatriculaActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        var matricula = new MatriculaVentana();
-        matricula.setIconifiable(true);
-        matricula.setClosable(true);
-        matricula.setResizable(true);
-        this.jDesktopPane2.add(matricula);
-        matricula.setVisible(true);
-        matricula.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         
-    }//GEN-LAST:event_mnuMatriculaActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void mnuPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPropietarioActionPerformed
+    private void mnuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+
+    }//GEN-LAST:event_mnuSalirActionPerformed
+
+    private void mnuPropietario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuPropietario1ActionPerformed
         // TODO add your handling code here:
         var propietario = new PropietarioVentana();
         propietario.setIconifiable(true);
@@ -140,7 +204,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         propietario.setVisible(true);
         propietario.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         
-    }//GEN-LAST:event_mnuPropietarioActionPerformed
+    }//GEN-LAST:event_mnuPropietario1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void mnuMatricula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMatricula1ActionPerformed
+        // TODO add your handling code here:
+        var matricula = new MatriculaVentana();
+        matricula.setIconifiable(true);
+        matricula.setClosable(true);
+        matricula.setResizable(true);
+        this.jDesktopPane2.add(matricula);
+        matricula.setVisible(true);
+        matricula.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+        
+    }//GEN-LAST:event_mnuMatricula1ActionPerformed
+
+    private void mnuSalie1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalie1ActionPerformed
+        // TODO add your handling code here:
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_mnuSalie1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,9 +270,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem mnuAuto;
-    private javax.swing.JMenuItem mnuMatricula;
-    private javax.swing.JMenuItem mnuPropietario;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem mnuMatricula1;
+    private javax.swing.JMenuItem mnuPropietario1;
+    private javax.swing.JMenuItem mnuSalie1;
+    private javax.swing.JMenuItem mnuSalir;
+    private javax.swing.JMenu mnuSalir1;
     // End of variables declaration//GEN-END:variables
 }

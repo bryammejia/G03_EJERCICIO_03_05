@@ -18,7 +18,7 @@ public class AutoControlador {
         this.autoServicio.crear(auto);
         return auto;
     }
-    
+        
     public Auto buscarAuto(String arg){
         return this.autoServicio.buscarPorCodigo(Integer.valueOf(arg));
     }
@@ -26,7 +26,7 @@ public class AutoControlador {
     public Auto eliminar(String arg){
         return this.autoServicio.eliminar(Integer.valueOf(arg));
     }
-    public Auto modificar(String []args){
+    public Auto modificar(String []args){                                                                                                   
         Auto autoNuevo = new Auto(Integer.valueOf(args[0]), args[1], args[2], Integer.valueOf(args[3]), Integer.valueOf(args[4]));
         this.autoServicio.modificar(Integer.valueOf(args[0]), autoNuevo);
         return autoNuevo;
